@@ -1,7 +1,7 @@
 #= require jquery
 #= require bootstrap-sprockets
 #= require jquery_ujs
-#= require jquery-ui
+#= require jquery.ui.all
 #= require tinymce-jquery
 #= require codemirror
 #= require codemirror/modes/css
