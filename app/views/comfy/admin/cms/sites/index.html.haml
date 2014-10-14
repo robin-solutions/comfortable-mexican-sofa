@@ -1,5 +1,5 @@
 .page-header
-  = link_to t('.new_link'), new_comfy_admin_cms_site_path, :class => 'btn btn-default pull-right'
+  = link_to t('.new_link'), new_comfy_admin_cms_site_path, :class => 'button secondary right'
   %h2= t('.title')
 
 = render 'comfy/admin/cms/partials/sites_before'
@@ -19,9 +19,9 @@
           .host
             = link_to site.url, site.url, :target => '_blank'
       %td
-        .btn-group.btn-group-sm
-          = link_to t('.select'),  comfy_admin_cms_site_pages_path(site), :class => 'btn btn-default'
-          = link_to t('.edit'), edit_comfy_admin_cms_site_path(site), :class => 'btn btn-default'
-          = link_to t('.delete'), comfy_admin_cms_site_path(site), :method => :delete, :data => {:confirm => t('.are_you_sure')}, :class => 'btn btn-danger'
+        %ul.button-group
+          %li= link_to t('.select'),  comfy_admin_cms_site_pages_path(site), :class => 'button secondary tiny'
+          %li= link_to t('.edit'), edit_comfy_admin_cms_site_path(site), :class => 'button secondary tiny'
+          %li= link_to t('.delete'), comfy_admin_cms_site_path(site), :method => :delete, :data => {:confirm => t('.are_you_sure')}, :class => 'button alert tiny'
           
 = render 'comfy/admin/cms/partials/sites_after'

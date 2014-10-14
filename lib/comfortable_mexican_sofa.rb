@@ -3,6 +3,9 @@ unless defined? ComfortableMexicanSofa::Application
   require_relative 'comfortable_mexican_sofa/engine'
 end
 
+require 'rubygems'
+require 'foundation_rails_helper'
+
 require_relative 'comfortable_mexican_sofa/version'
 require_relative 'comfortable_mexican_sofa/error'
 require_relative 'comfortable_mexican_sofa/configuration'

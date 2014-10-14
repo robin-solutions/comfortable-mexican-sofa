@@ -2,15 +2,16 @@
 
   = render 'comfy/admin/cms/partials/body_before'
 
-  .body-wrapper
-    .left-column
+  .body-wrapper{class: 'row'}
+    .left-column{class: 'medium-2 small-12 columns'}
       .left-column-content
         = render 'layouts/comfy/admin/cms/left'
-    .right-column
+    .center-column{class: 'medium-8 small-12 columns'}
+      = render 'layouts/comfy/admin/cms/center'
+      = render 'layouts/comfy/admin/cms/footer'        
+    .right-column{class: 'medium-2 small-12 columns'}
       .right-column-content
         = render 'layouts/comfy/admin/cms/right'
-    .center-column
-      = render 'layouts/comfy/admin/cms/center'
-      = render 'layouts/comfy/admin/cms/footer'
+
   
   = render 'layouts/comfy/admin/cms/footer_js'

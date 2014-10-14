@@ -3,4 +3,4 @@
 = form_for @category, :as => :category, :url => comfy_admin_cms_site_category_path(@site, category), :remote => true, :html => {:id => dom_id(category)} do |form|
   .input-append
     = form.text_field :label
-    %button.btn.btn-mini= t('.save')
+    %button.button.tiny= t('.save')

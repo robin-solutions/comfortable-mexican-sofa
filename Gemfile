@@ -1,8 +1,14 @@
 source 'http://rubygems.org'
 
+gem "spring", group: :development
+
 gemspec
+gem 'foundation-rails', '>= 5.0.0'
+gem 'foundation_rails_helper', '>= 0.5.0'
+
 
 group :development do
+  gem 'pry-byebug'
   gem 'awesome_print'
   gem 'better_errors'
   gem 'binding_of_caller'

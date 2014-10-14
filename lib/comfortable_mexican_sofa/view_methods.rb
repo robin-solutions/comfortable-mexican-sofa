@@ -8,8 +8,8 @@ module ComfortableMexicanSofa::ViewMethods
     # Wrapper around ComfortableMexicanSofa::FormBuilder
     def comfy_form_for(record, options = {}, &proc)
       options[:builder] = ComfortableMexicanSofa::FormBuilder
-      options[:layout] ||= :horizontal
-      bootstrap_form_for(record, options, &proc)
+      #options[:layout] ||= :horizontal
+      form_for(record, options, &proc)
     end
 
     # Injects some content somewhere inside cms admin area

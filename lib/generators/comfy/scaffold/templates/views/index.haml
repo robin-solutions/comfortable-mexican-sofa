@@ -1,5 +1,5 @@
-.page-header
-  = link_to 'New <%= class_name.titleize %>', new_admin_<%= file_name %>_path, :class => 'btn btn-default pull-right'
+.page-header.clearfix
+  = link_to 'New <%= class_name.titleize %>', new_admin_<%= file_name %>_path, :class => 'button secondary right'
   %h2= '<%= class_name.pluralize.titleize %>'
 
 = paginate @<%= file_name.pluralize %>, :theme => 'comfy'
@@ -16,8 +16,8 @@
       %td<%= '.main' if index == 0 %>= <%= file_name%>.<%= attr.name %>
     <%- end -%>
       %td
-        .btn-group.btn-group-sm
-          = link_to 'Edit', edit_admin_<%= file_name %>_path(<%= file_name %>), :class => 'btn btn-default'
-          = link_to 'Delete', admin_<%= file_name %>_path(<%= file_name %>), :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => 'btn btn-danger'
+        %ul.button-group
+          %li= link_to 'Edit', edit_admin_<%= file_name %>_path(<%= file_name %>), :class => 'button secondary tiny'
+          = link_to 'Delete', admin_<%= file_name %>_path(<%= file_name %>), :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => 'button alert tiny'
 
 = paginate @<%= file_name.pluralize %>, :theme => 'comfy'
