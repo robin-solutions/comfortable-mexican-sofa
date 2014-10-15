@@ -1,5 +1,4 @@
 #= require jquery
-# require bootstrap-sprockets
 #= require jquery_ujs
 #= require jquery-ui
 #= require tinymce-jquery
@@ -10,8 +9,6 @@
 #= require codemirror/modes/markdown
 #= require codemirror/modes/xml
 #= require codemirror/addons/edit/closetag
-# require bootstrap
-# require comfortable_mexican_sofa/lib/bootstrap-datetimepicker
 #= require comfortable_mexican_sofa/lib/diff
 #= require foundation
 
@@ -30,7 +27,7 @@ window.CMS =
     CMS.wysiwyg()
     CMS.codemirror()
     CMS.sortable_list()
-    CMS.timepicker()
+    # CMS.timepicker()
     CMS.page_blocks()
     CMS.mirrors()
     CMS.page_update_preview()
@@ -92,15 +89,15 @@ window.CMS.sortable_list = ->
       $.post("#{CMS.current_path}/reorder", "_method=put&#{$(this).sortable('serialize')}")
 
 
-window.CMS.timepicker = ->
-  $('input[type=text][data-cms-datetime]').datetimepicker
-    format:     'yyyy-mm-dd hh:ii'
-    minView:    0
-    autoclose:  true
-  $('input[type=text][data-cms-date]').datetimepicker
-    format:     'yyyy-mm-dd'
-    minView:    2
-    autoclose:  true
+# window.CMS.timepicker = ->
+#   $('input[type=text][data-cms-datetime]').datetimepicker
+#     format:     'yyyy-mm-dd hh:ii'
+#     minView:    0
+#     autoclose:  true
+#   $('input[type=text][data-cms-date]').datetimepicker
+#     format:     'yyyy-mm-dd'
+#     minView:    2
+#     autoclose:  true
 
 
 window.CMS.page_blocks = ->
