@@ -2,7 +2,7 @@
   - box_style = type == 'success' ? 'success' : 'alert' 
   .alert-box{:class => "#{box_style}", :tabindex => '0', 'aria-live' => 'assertive', :data => { :alert => true } }
     = message
-    %a.close('href'='#')
+    %a.close{href: '#'}
 
 .center-column-content
   = yield
