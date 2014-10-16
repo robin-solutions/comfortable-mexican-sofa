@@ -1,7 +1,13 @@
 - flash.each do |type, message|
-  .alert{:class => "alert-#{type}"}
-    %button.close{:type => 'button', :class => "close", :data => {:dismiss => 'alert'}} &times;
+  - box_style = type == 'notice' ? 'warning' : 'success'
+  .alert{:class => "alert-box #{box_style}",:tabindex => '0', :aria_live => 'assertive', :data => { :alert => true } }
     = message
+    %button.close{:tabindex => '0', :aria_label => 'Close Alert', :href => '#'} &times;
 
 .center-column-content
   = yield
+
+  <div id="mainAlert1" data-alert class="alert-box" tabindex="0" aria-live="assertive" role="dialogalert">
+    Your content goes here
+    <button href="#" tabindex="0" class="close" aria-label="Close Alert">&times;</button>
+  </div>
