@@ -1,5 +1,5 @@
 - flash.each do |type, message|
-  - box_style = type == 'notice' ? 'warning' : 'success'
+  - box_style = type == 'notice' ? 'success' : 'warning'  
   .alert{:class => "alert-box #{box_style}",:tabindex => '0', :aria_live => 'assertive', :data => { :alert => true } }
     = message
     %button.close{:tabindex => '0', :aria_label => 'Close Alert', :href => '#'} &times;
