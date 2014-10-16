@@ -1,8 +1,8 @@
 - flash.each do |type, message|
-  - box_style = type == 'notice' ? 'success' : 'warning'  
-  .alert{:class => "alert-box #{box_style}",:tabindex => '0', :aria_live => 'assertive', :data => { :alert => true } }
+  - box_style = type == :notice ? 'success' : 'alert'  
+  .alert-box{:class => "#{box_style}", :tabindex => '0', 'aria-live' => 'assertive', :data => { :alert => true } }
     = message
-    %button.close{:tabindex => '0', :aria_label => 'Close Alert', :href => '#'} &times;
+    %button.close{:tabindex => '0', 'aria-label' => 'Close Alert', :href => '#'} &times;
 
 .center-column-content
   = yield
