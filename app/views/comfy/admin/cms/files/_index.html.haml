@@ -1,8 +1,8 @@
 .box.file-uploader
   = form_for :file, :url => comfy_admin_cms_site_files_path(@site, :ajax => true), :html => {:multipart => true, :target => 'file-upload-frame'} do |form|
-    %span.button.small
+    %span.button.tiny.upload-file-button
       = t('.button')
-      = form.file_field :file, :multiple => true, :id => nil
+      = form.file_field :file, :label => false, :multiple => true, :id => nil
   
   .uploaded-files
     - @site.files.not_page_file.order(:label).each do |file|

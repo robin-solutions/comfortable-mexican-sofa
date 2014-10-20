@@ -83,7 +83,7 @@ body#comfy
   .right-column-content .file-uploader
     form
       margin-bottom: 5px
-      .btn-file
+      .upload-file-button
         width: 100%
         position: relative
         overflow: hidden
@@ -256,6 +256,7 @@ body#comfy
     margin: 0
     list-style: none
     .item
+      width: 100%
       overflow: hidden
       padding: 5px
       border-radius: 3px
@@ -263,6 +264,9 @@ body#comfy
       border: 1px solid #ddd
       &:hover
         background-color: #f5f5f5
+      .button-group
+        .button
+          margin-bottom: 0
       .toggle
         float: left
         height: 28px

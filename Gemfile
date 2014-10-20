@@ -5,7 +5,7 @@ gem "spring", group: :development
 gemspec
 gem 'foundation-rails', '>= 5.0.0'
 gem 'foundation_rails_helper', '>= 0.5.0'
-
+gem 'foundation-icons-sass-rails'
 
 group :development do
   gem 'pry-byebug'

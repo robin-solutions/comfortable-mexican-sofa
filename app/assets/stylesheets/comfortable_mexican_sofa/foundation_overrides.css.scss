@@ -1,0 +1,46 @@
+body#comfy {
+
+  .page-header {
+    margin-top: 0;
+    
+    h2 {
+      margin-top: 0;
+    }
+  }
+
+  table.table {
+    table-layout: fixed;
+    width: 100%;
+    white-space: nowrap;
+
+    td {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    td.icon_column {
+      padding: 0 3px;
+      width: 34px; // 6px padding + 28px div.icon width
+    }
+
+    td.buttons_column {
+      text-align: center;
+      width: 22.5%;
+
+      .button-group .button {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+  // form
+  //   .form-group
+  //     margin-bottom: 10px
+  //     label.checkbox-inline
+  //       margin-right: 10px
+  //   .form-group.form-actions
+  //     padding: 15px 0
+  //     border-top: 1px solid #eee
+  //     background-color: #f5f5f5
